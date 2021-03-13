@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- insert favicon -->
+	<link rel="icon" href="img/portfolio.png">
+	<!-- link own css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Agulu Agwata</title>
+</head>
+<body> 
+	<div id="head-wrap">
+		<h1 id="head-title"><a href="index.html">Agulu Agwata</a></h1>
+	</div>
+	<div id="nav">
+		<ul id="nav-items">
+			<li class="nav-item"><a class="pageTab" data-page="1" href="">About</a></li>
+			<li class="nav-item"><a class="pageTab" data-page="2" href="">Projects</a></li>
+		</ul>		
+	</div>
+
+	<div class="container page" id="page-1">
+		<div id="about-content" class="row">
+			<div id="about-text">
+				<h2>I Mold</h2>
+				<p>My name is Agulu Agwata. I love my name.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis ut fuga quia, et praesentium possimus, quod iusto ea, perspiciatis repellat dolores aperiam qui at id tempore eaque earum quisquam.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis ut fuga quia, et praesentium possimus, quod iusto ea, perspiciatis repellat dolores aperiam qui at id tempore eaque earum quisquam.</p>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis ut fuga quia, et praesentium possimus, quod iusto ea, perspiciatis repellat dolores aperiam qui at id tempore eaque earum quisquam.</p>
+				<blockquote cite="#">
+	            	<p>I don't think there's an artist of any value who doesn't doubt what they're doing.</p>
+                	<footer>- francis ford coppola</footer>
+				</blockquote>
+				
+			</div>
+			<div id="pic">
+				<img id="about-pic" src="img/Agulu.jpg" alt="my picture">
+			</div>
+		</div>		
+	</div>
+
+	<div class="container page" id="page-2">
+		<div class="row">
+			<div class="project">
+				<div class="project-pic">
+				<img src="img/potter-1.jpg" alt="project-1" class="img">					
+				</div>
+				<div class="project-info">
+					<p>Pundo Kettle</p>
+					<small>30/10/2020</small>
+					
+				</div>
+			</div>
+			<div class="project">
+				<div class="project-pic">
+				<img src="img/potter-2.jpg" alt="project-1" class="img">					
+				</div>
+				<div class="project-info">
+					<p>Pundo Kettle</p>
+					<small>30/10/2020</small>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="project">
+				<div class="project-pic">
+				<img src="img/potter-3.jpg" alt="project-1" class="img">					
+				</div>
+				<div class="project-info">
+					<p>Pundo Kettle</p>
+					<small>30/10/2020</small>
+					
+				</div>
+			</div>
+			<div class="project">
+				<div class="project-pic">
+				<img src="img/potter-4.jpg" alt="project-1" class="img">					
+				</div>
+				<div class="project-info">
+					<p>Pundo Kettle</p>
+					<small>30/10/2020</small>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<p>Mini Project, EldoHub &copy 2020</p>
+	</footer>
+
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			document.querySelector('.page').style.display = 'block';
+		});
+
+		let pageTabs = document.querySelectorAll('.pageTab');
+		pageTabs.forEach(pageTab => pageTab.addEventListener('click', function(e){
+			e.preventDefault();
+			let pages = document.querySelectorAll('.page');
+			pages.forEach(page => page.style.display = 'none');
+			document.querySelector(`#page-${this.dataset.page}`).style.display = 'block';
+		}));
+	</script>	
+
+</body>
+</html>
